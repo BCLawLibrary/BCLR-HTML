@@ -31,7 +31,7 @@ function modifyDOM() {
 	});
 
 
-	$("*").removeAttr("class").removeAttr("style").removeAttr("align");
+	$("*").removeAttr("style").removeAttr("align");
 	$('p, h3').each(function() {
 		var html = $(this).html();
 		$(this).html(html.replace(/\r?\n|\r/g, ' '));

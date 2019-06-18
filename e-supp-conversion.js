@@ -7,6 +7,7 @@ function modifyDOM() {
 	  const p = new RegExp(a.split('').join('|'), 'g')
 
 	  return string.toString().toLowerCase()
+	    .replace(/<.+?(?=>)/g, '') //custom: remove html tags
 	    .replace(/\s+/g, '-') // Replace spaces with -
 	    .replace(p, c => b.charAt(a.indexOf(c))) // Replace special characters
 	    .replace(/&/g, '-and-') // Replace & with 'and'
